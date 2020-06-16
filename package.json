@@ -1,12 +1,16 @@
 {
   "name": "@agreejwc/common",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
     "clean": "del-cli ./build/*",
     "build": "npm run clean && tsc",
-    "publish": ""
+    "pub": "git add . && git commit -m \"updates\" && npm version patch && npm run build && npm publish"
   },
   "keywords": [],
   "author": "",
