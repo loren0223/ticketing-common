@@ -11,5 +11,6 @@ export const errorHandler = (
     return res.status(err.statusCode).send({ errors: err.serializeErrors() });
   }
 
+  console.error(err); // Show unexpected error for debugging
   res.status(500).send({ errors: [{ message: err.message }] });
 };
